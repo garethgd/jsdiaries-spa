@@ -1,0 +1,248 @@
+ @import '../base/mixins.scss';
+         
+            .site-header-menu {
+                width: 100%;
+            }
+            .js-blog {
+                position: absolute;
+                left: 0;
+                width: 12rem;
+                top: 0%;
+            }
+            
+            .entry-header {
+                padding: 0;
+            }
+            
+            @media (max-width: 900px) {
+                .single-post .entry-header {
+                    width: 100%;
+                    margin: 0;
+                }
+                .single-post i span {
+                    font-size: 22px;
+                }
+                .single-post {
+                    .entry-content {
+                        padding: 0 10%;
+                        h4 {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+            
+            .post-bg {
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-direction: row;
+                flex-direction: row;
+                -webkit-align-items: center;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+               // background: url(images/fox.jpg);
+                box-shadow: inset 0 0 0 1000px rgba(100, 100, 100, 0.4);
+                /* color: white; */
+                background-size: cover;
+                background-position-y: 51%;
+                height: 457px;
+                background-repeat: no-repeat;
+            }
+            
+            .primary-menu {
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-direction: row;
+                flex-direction: row;
+                -webkit-align-items: center;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+            }
+            
+            #site-header-menu {
+                margin-top: 0;
+            }
+            
+            .site-header-main {
+                text-align: center;
+            }
+            
+            .site-inner {
+                .site-header {
+                    padding-top: 40px;
+                    padding-bottom: 0px;
+                    @include Phone {
+                        padding-bottom: 80px;
+                    }
+                }
+            }
+            
+            .site-branding {
+                margin: 0 auto;
+                .site-description {
+                    color: black;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 100;
+                    letter-spacing: 0px;
+                    font-style: normal;
+                    font-size: 10px;
+                    color: #a00029;
+                    color: black;
+                    font-weight: normal;
+                    letter-spacing: 0.15em;
+                    text-transform: uppercase;
+                }
+            }
+            
+            .menu-navigation-container {
+                #menu-navigation {
+                    @include Phone {
+                        display: block;
+                        margin-top: 25%;
+                    }
+                    li {
+                        &:nth-child(1) {
+                            &:before {
+                                content: "Mobile & Web Apps";
+                            }
+                        }
+                        &:nth-child(2) {
+                            &:before {
+                                content: "Books & Tools";
+                            }
+                        }
+                        &:nth-child(3) {
+                            &:before {
+                                content: "Angular 4 & Ionic 3";
+                            }
+                            &:after {
+                                display: none;
+                            }
+                        }
+                        &:nth-last-child() {
+                            &:after {
+                                display: none;
+                            }
+                        }
+                        &:before {
+                            display: block;
+                            position: absolute;
+                            pointer-events: none;
+                            top: -20px;
+                            left: -50px;
+                            right: -50px;
+                            text-align: center;
+                            font-size: 9px;
+                            color: gray;
+                            font-weight: normal;
+                            letter-spacing: 0.15em;
+                            text-transform: uppercase;
+                            opacity: 1.5;
+                            @include Phone {
+                                top: 51px;
+                                font-size: 10px;
+                            }
+                        }
+                        &:after {
+                            content: '';
+                            display: block;
+                            width: 19px;
+                            background: #a00029;
+                            height: 2px;
+                            position: absolute;
+                            top: 19px;
+                            left: 98%;
+                            margin-left: -8px;
+                            -webkit-transition: background-color 0.4s ease-in-out;
+                            transition: background-color 0.4s ease-in-out;
+                            @include Phone {
+                                display: none;
+                            }
+                        }
+                        a {
+                            font-size: 15px;
+                            font-weight: 500;
+                            letter-spacing: 0.15em;
+                            text-transform: uppercase;
+                            color: black;
+                            font-family: 'Montserrat', sans-serif;
+                            padding: 0.65625em 5.875em;
+                            @include Phone {
+                                padding: 1.65625em 5.875em;
+                                text-align: center;
+                            }
+                            &:after {
+                                content: ' ';
+                                display: block;
+                                width: 15px;
+                                height: 2px;
+                                background-color: transparent;
+                                position: absolute;
+                                top: 50px;
+                                left: 50%;
+                                margin-left: -8px;
+                                -webkit-transition: background-color 0.4s ease-in-out;
+                                transition: background-color 0.4s ease-in-out;
+                            }
+                            &:hover {
+                                &:after {
+                                    background-color: $js-red;
+                                    @include Phone {
+                                        display: none;
+                                    }
+                                }
+                                &:before {
+                                    background-color: $js-red;
+                                    @include Phone {
+                                        display: none;
+                                    }
+                                }
+                            }
+                            &:before {
+                                content: ' ';
+                                display: block;
+                                width: 15px;
+                                height: 2px;
+                                background-color: transparent;
+                                position: absolute;
+                                top: 45px;
+                                left: 50%;
+                                margin-left: -8px;
+                                -webkit-transition: background-color 0.4s ease-in-out;
+                                transition: background-color 0.4s ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .menu-toggle {
+                z-index: 1000;
+                position: absolute;
+                margin: 0 auto;
+                font-size: 15px;
+                right: 0;
+                font-weight: 500;
+                left: 0;
+                letter-spacing: 0.15em;
+                text-transform: uppercase;
+                color: black;
+                font-family: 'Montserrat', sans-serif;
+                border: 1px solid #a00029;
+                color: #a00029;
+            }
+            
+            .menu-toggle:hover,
+            .menu-toggle:focus {
+                background-color: transparent;
+                border-color: #007acc;
+                color: #007acc;
+            }
+            
+            @include Phone {
+                #menu-social-media {
+                    display: none;
+                }
+            }
