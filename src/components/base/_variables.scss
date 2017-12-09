@@ -9,7 +9,39 @@ $screen-sm-max: ($screen-md-min - 1) !default;
 $screen-md-max: ($screen-lg-min - 1) !default;
 $screen-tablet-max: 1024px !default;
 
-$js-red:#a00029;
+$js-red:  rgb(160, 0, 41);
+
+$black: black;
+$color_burgundy_approx: #a00029;
+$white: white;
+$color_storm_dust_75_approx: rgba(92,98,101,.9);
+$color_fuscous_gray_approx: #555;
+$color_celeste_approx: #ccc;
+$color_old_brick_approx: #961b2e;
+$color_burgundy_75_approx: rgba(160, 0, 41, 0.9);
+$color_razzmatazz_75_approx: rgba(225, 25, 84, 0.9);
+$color_red_ribbon_75_approx: rgba(225, 0, 65, 0.9);
+$color_forest_green_75_approx: rgba(0, 178, 25, 0.9);
+$color_claret_75_approx: rgba(127, 38, 61, 0.9);
+$color_green_75_approx: rgba(0, 255, 35, 0.9);
+$color_monza_75_approx: rgba(204, 0, 52, 0.9);
+$color_screamin_green_75_approx: rgba(98, 255, 64, 0.9);
+$color_torch_red_75_approx: rgba(255, 0, 65, 0.9);
+$color_flirt_approx: #a00072;
+$color_mercury_approx: #e1e3e5;
+$color_bombay_approx: #adb3b9;
+$color_woodsmoke_20_approx: rgba(12,13,14,0.2);
+$color_shark_approx: #282826;
+$color_mariner_approx: #3575d3;
+$color_dodger_blue_approx: #408dff;
+$color_christi_approx: #71a61b;
+$color_lima_approx: #83c11f;
+$color_royal_heath_approx: #a4286a;
+$color_monza_approx: #bf002a;
+$blue: blue;
+$white: white;
+
+$web_orange: orange;
 
 %img {
     display: block;

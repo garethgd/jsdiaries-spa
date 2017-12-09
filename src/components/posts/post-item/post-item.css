@@ -1,0 +1,137 @@
+/*FONT SIZE MIXIN */
+/*FONTS */
+/* BREAKPOINTS MIXIN */
+/* DEVICES BREAKPOINTS */
+/*@mixin iPad {
+  @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-tablet-max) {
+    @content;
+  }
+}*/
+.site-inner {
+  max-width: 100%; }
+
+.content-area {
+  width: 100%; }
+
+@media (max-width: 767px) {
+  .home .entry-content {
+    margin: 0; } }
+
+.post {
+  width: 33%;
+  display: inline-block;
+  position: relative; }
+  .post a {
+    margin: 16px auto;
+    border: 1px solid white;
+    padding: 5px 45px;
+    box-shadow: none;
+    color: white; }
+    .post a:hover {
+      color: black;
+      background: white; }
+  .post img {
+    width: 100%;
+    height: 385px; }
+  .post:nth-child(odd) .hover {
+    background: rgba(160, 0, 41, 0.5);
+    -webkit-transition: all .5s ease-out 0.1s;
+    -moz-transition: all .5s ease-out 0.1s;
+    -o-transition: all .5s ease-out 0.1s;
+    transition: all .5s ease-out 0.1s; }
+  .post:nth-child(even) .hover {
+    background: rgba(100, 100, 100, 0.5); }
+  .post:hover:nth-child(odd) .hover {
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background: rgba(100, 100, 100, 0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$js-red, endColorstr=$js-red);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=$js-red, endColorstr=$js-red)"; }
+  .post:hover .hover {
+    display: block;
+    position: absolute;
+    opacity: 1;
+    bottom: 0;
+    height: 100%;
+    overflow: hidden;
+    padding: 35px 10px 0;
+    transition: opacity 0.4s linear;
+    text-align: center; }
+    .post:hover .hover h6 {
+      transform: translateY(0%);
+      transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      letter-spacing: 2px; }
+
+.hover {
+  display: block;
+  position: absolute;
+  opacity: 0.9;
+  bottom: 0;
+  height: 100%;
+  overflow: hidden;
+  padding: 35px 10px 0;
+  left: 0;
+  color: white;
+  position: absolute;
+  width: 100%;
+  webkit-transition: opacity 0.4s linear;
+  transition: opacity 0.4s linear; }
+  .hover p {
+    font-family: 'Cardo', serif !important;
+    font-size: 18px !important;
+    letter-spacing: 0.1rem !important; }
+  .hover .icon span {
+    font-size: 55px; }
+  .hover:hover p {
+    transform: translateY(0%);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    font-size: 20px; }
+  .hover:hover .ghost {
+    transform: translateY(0%);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  .hover:hover .tile-btn {
+    transform: translateY(0%);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    bottom: 40px; }
+  .hover:hover .icon span {
+    font-size: 67px;
+    transform: translateY(0%);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  .hover h6 {
+    font-weight: 100;
+    font-style: normal;
+    margin: 0 auto 40px;
+    transform: translateY(0%);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    bottom: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    /* padding: 0.65625em 5.875em; */ }
+
+.entry-header {
+  background: none;
+  display: none;
+  text-align: center; }
+
+.tile-btn {
+  position: absolute;
+  left: 0;
+  bottom: 80px;
+  right: 0; }
+  .tile-btn a {
+    margin: 16px auto;
+    border: 1px solid white;
+    padding: 9px 45px;
+    box-shadow: none;
+    font-family: 'Cardo', serif;
+    font-size: 18px;
+    letter-spacing: 0;
+    color: white;
+    font-weight: 100; }
+
+#secondary {
+  display: none; }
